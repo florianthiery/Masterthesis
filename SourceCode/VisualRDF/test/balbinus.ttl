@@ -1,0 +1,14 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix whois: <http://www.kanzaki.com/ns/whois#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix time: <http://www.w3.org/2006/time#>. 
+@prefix pleiadestp: <http://pleiades.stoa.org/vocabularies/time-periods/>.
+@prefix potter: <http://143.93.114.104/rest/samian/potters/>.
+potter:Balbinus whois:career _:blanknode;
+  a foaf:Person;
+  foaf:name "Balbinus";
+  foaf:gender "male";
+  time:inside pleiadestp:roman.
+_:blanknode a whois:Job;
+rdfs:label "Potter".

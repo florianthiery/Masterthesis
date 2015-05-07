@@ -1,0 +1,13 @@
+@prefix time: <http://www.mytime.de/> .
+@prefix site: <http://www.mysite.de/> .
+#site:A time:before site:B .
+#site:C time:before site:A .
+#site:D time:after site:B .
+#site:E time:meets site:C .
+#site:F time:overlapped-by site:C .
+
+site:A time:meets site:Ref .
+site:B time:during site:A .
+site:C time:met-by site:Ref .
+site:D time:contains site:A .
+site:E time:starts site:D .

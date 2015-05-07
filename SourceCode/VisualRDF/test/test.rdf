@@ -1,0 +1,111 @@
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:whois="http://www.kanzaki.com/ns/whois#" xmlns:potter="http://143.93.114.104/rest/samian/potters/" xmlns:pleiadestp="http://pleiades.stoa.org/vocabularies/time-periods/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:time="http://www.w3.org/2006/time#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:anno="http://localhost:8084/rest/samian/annotations#"  xmlns:oa="http://www.openannotation.or4g/ns/" xmlns:findspot="http://localhost:8084/rest/samian/findspots/" xmlns:agent="http://localhost:8084/rest/samian/agents#" xmlns:fragment="http://localhost:8084/rest/samian/fragments/">
+  <foaf:Person rdf:about="potter:Abbo">
+    <foaf:name>Abbo</foaf:name>
+    <foaf:gender>male</foaf:gender>
+    <whois:career>
+      <whois:Job>
+        <rdfs:label>Potter</rdfs:label>
+      </whois:Job>
+     </whois:career>
+     <time:inside rdf:resource="pleiadestp:roman" />
+   </foaf:Person>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-Rottenburg">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/findspots/Rottenburg" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-Saalburg">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/findspots/Saalburg" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-Cirencester">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/findspots/Cirencester" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-Silchester">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/findspots/Silchester" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-Great_Chesters">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/findspots/Great_Chesters" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-Heidelberg">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/findspots/Heidelberg" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-14143">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/fragments/14143" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-14170">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/fragments/14170" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-14195">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/fragments/14195" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-14207">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/fragments/14207" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-14208">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/fragments/14208" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <oa:Annotation rdf:about="http://localhost:8084/rest/samian/annotations#Abbo-14210">
+    <oa:motivatedBay rdf:resource="http://www.openannotation.or4g/ns/linking" />
+    <oa:annotatedBy rdf:resource="http://localhost:8084/rest/samian/agents#thiery" />
+    <oa:annotatedAt>Fri Nov 01 08:12:51 CET 2013</oa:annotatedAt>
+    <oa:hasBody rdf:resource="http://localhost:8084/rest/samian/fragments/14210" />
+    <oa:hasTarget rdf:resource="http://localhost:8084/rest/samian/potters/Abbo" />
+    <dcterms:description>Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.</dcterms:description>
+  </oa:Annotation>
+  <foaf:person rdf:about="http://localhost:8084/rest/samian/agents#thiery">
+    <foaf:name>Florian Thiery</foaf:name>
+  </foaf:person>
+</rdf:RDF>

@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fragment: <http://143.93.114.104/rest/samian/fragments/>.
+@prefix crm: <http://purl.org/NET/crm-owl#> .
+@prefix arachne: <http://arachne.uni-koeln.de/vocabulary/objectType#>.
+@prefix claros: <http://id.clarosnet.org/vocab/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+@prefix oa: <http://www.openannotation.or4g/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix anno: <http://143.93.114.104/rest/samian/annotations#>.
+@prefix agent: <http://143.93.114.104/rest/samian/agents#>.
+@prefix potter: <http://143.93.114.104/rest/samian/potters/>.
+@prefix findspot: <http://143.93.114.104/rest/samian/findspots/>.
+@prefix fragment: <http://143.93.114.104/rest/samian/fragments/>.
+
+#Representation like CIDOC CRM (Claros) Syntax
+
+fragment:14143 a crm:E22_Man-Made_Object;
+  rdfs:label "Fragment einer Terra Sigillata Scherbe mit Die eines Toepfers";
+  crm:P102_has_title "Fragment einer Terra Sigillata Scherbe mit Die eines Toepfers";
+  crm:P2_has_type "Samian Terra Sigillata"; 
+  crm:P2_has_type "Dish"; 
+  crm:P57_has_number_of_parts "1";
+  crm:P56_bears_feature "1a";
+  crm:P44_has_condition [ a crm:E3_Condition_State;
+    crm:P2_has_type "fragment"];
+  crm:P45_consists_of "Ton".
+
+#Links to Findspots and Potters
+
+anno:14143-Rottenburg a oa:Annotation;
+  oa:motivatedBay oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:20:17 CET 2013";
+  oa:hasBody findspot:Rottenburg;
+  oa:hasTarget fragment:14143;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:14143-Abbo a oa:Annotation;
+  oa:motivatedBay oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:20:17 CET 2013";
+  oa:hasBody potter:Abbo;
+  oa:hasTarget fragment:14143;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has stamped the fragment.".
+agent:thiery a foaf:person;
+  foaf:name "Florian Thiery".

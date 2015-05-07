@@ -1,0 +1,193 @@
+<HTML>
+
+    <HEAD>
+        
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery-ui.css"/>
+
+        <link rel="stylesheet" href="leaflet.css" />
+        <script type="text/javascript" src="leaflet.js"></script>
+
+        <script type="text/javascript" src="leaflet.markercluster-src.js"></script>
+        <link rel="stylesheet" href="MarkerCluster.css" />
+        <link rel="stylesheet" href="MarkerCluster.Default.css" />
+        
+        <script type="text/javascript" src="linkfunctions.js"></script>
+        
+        <script src="Control.FullScreen.js"></script>
+
+        <TITLE>GeInArFa | Linked Samian Ware Explorer</TITLE>
+        <STYLE>
+
+            body,input{font-family:Calibri,Arial;margin:0px}
+            h1{margin:0 0 0 20px}
+            html,body,#container{height:100%}
+            ul{margin-left:1em;padding-left:1em;}
+            
+            a:link{color:black; text-decoration: unnderline}
+            a:visited{color:black; text-decoration: unnderline}
+            a:hover{color:black; text-decoration: unnderline}
+
+            body>#container{height:auto;min-height:100%}
+
+            .logo{width:450px;height:150px;padding:5px;background-color:white;position:absolute;top:20px;left:20px}
+            .map{width:467px;height:430px;top:190px;left:20px;}
+
+            .navi{width:600px;height:20px;padding:5px;background-color:white;position:absolute;top:20px;left:500px}
+            .close{width:25px;height:20px;padding:5px;background-color:white;position:absolute;top:20px;left:1300px}
+
+            .rep{width:400px;height:250px;padding:5px;background-color:#EEEEEE;position:absolute;top:60px;left:500px;overflow:auto;font-family:Arial,Helvetica,sans-serif;font-size:8pt;}
+
+            .list{width:400px;height:115px;padding:5px;background-color:#EEEEEE;position:absolute;top:60px;left:925px;overflow:auto;font-family:Arial,Helvetica,sans-serif;font-size:8pt;}
+            .pelagios{width:400px;height:115px;padding:5px;background-color:#EEEEEE;position:absolute;top:195px;left:925px;overflow:auto;font-family:Arial,Helvetica,sans-serif;font-size:8pt;}
+            .web{width:825px;height:280px;padding:5px;background-color:#EEEEEE;position:absolute;top:330px;left:500px;}
+            
+            #map:-webkit-full-screen { width: 100% !important; height: 100% !important; }
+		#map:-moz-full-screen { width: 100% !important; height: 100% !important; }
+		#map:full-screen { width: 100% !important; height: 100% !important; }
+		.leaflet-control-zoom-fullscreen { background-image: url(img/icon-fullscreen.png); }
+		.leaflet-control-zoom-fullscreen.last { margin-top: 5px }
+            
+            .info {
+            padding: 6px 8px;
+            font: 14px/16px Verdana, Geneva, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .info h4 {
+            font-family: Verdana, Geneva, sans-serif;
+            margin: 0 0 5px;
+            color: #065581;
+        }
+        .legend {
+            line-height: 18px;
+            color: #555;
+        }
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+
+        </STYLE>	
+
+    </HEAD>
+
+    <BODY onLoad="init()">
+
+        <div id="container">
+            <div class="map" id="map"></div>
+            <div class="rep" id="rep">
+                <span id="rep_content"></span>
+            </div>
+            <div class="list" id="list">
+                <span id="list_content"></span>
+            </div>
+            <div class="pelagios" id="pelagios">
+                <span id="pelagios_content"></span>
+            </div>
+            <div class="web" id="web" align="center" >
+                <span id="web_content"></span>
+            </div>
+            <div class="navi" id="navi">
+                <span id="span_navi"></span>
+            </div>
+            <div class="logo" id="logo">
+                <span id="span_logo"><center><img src="lswe.png" height="150"></center></span>
+            </div>
+            <div class="close" id="close">
+                <span id="span_close"><center><a href="#" onclick="reset_div()"><img src="close.png" height="15"></a></center></span>
+            </div>
+        </div>
+
+    </BODY>
+
+    <script type="text/javascript">
+
+        var uri_prefix_server = "http://143.93.114.104/";
+        var uri_prefix_samian = "http://143.93.114.104/rest/samian/";
+
+        var markers;
+
+        // Leaflet Map
+
+        var map = L.map('map').setView([50.0, 6.0], 6);
+
+        L.tileLayer('http://pelagios.dme.ait.ac.at/tilesets/imperium//{z}/{x}/{y}.png', {
+            maxZoom: 10,
+            attribution: 'Tiles: <a href="http://pelagios.dme.ait.ac.at/maps/greco-roman/about.html">Pelagios</a>, 2012; Data: NASA, OSM, Pleiades, DARMC'
+        }).addTo(map);
+
+        var markerIcon = L.icon({
+            iconUrl: 'marker-icon.png',
+            iconAnchor: [9, 30],
+            popupAnchor: [0, -30]
+        });
+
+        var markerIconRed = L.icon({
+            iconUrl: 'marker-icon-red.png',
+            iconAnchor: [9, 30],
+            popupAnchor: [0, -30]
+        });
+
+        var markerIconPotter = L.icon({
+            iconUrl: 'marker-potter.png',
+            iconAnchor: [9, 30],
+            popupAnchor: [0, -30]
+        });
+
+        var markerIconPotterLocation = L.icon({
+            iconUrl: 'marker-potterlocation.png',
+            iconAnchor: [9, 30],
+            popupAnchor: [0, -30]
+        });
+
+        var markerIconFindspot = L.icon({
+            iconUrl: 'marker-findspot.png',
+            iconAnchor: [9, 30],
+            popupAnchor: [0, -30]
+        });
+
+        var markerIconLocation = L.icon({
+            iconUrl: 'marker-location.png',
+            iconAnchor: [9, 30],
+            popupAnchor: [0, -30]
+        });
+
+        var populationLegend = L.control({position: 'topright'});
+
+        populationLegend.onAdd = function(map) {
+            var div = L.DomUtil.create('div', 'info legend');
+            div.innerHTML += '<img src="legend.jpg" alt="legend" height="85">';
+            return div;
+        };
+
+        readPotterGeoJSON(uri_prefix_server + "getfeature/findspots?param=all", setFindspotMap);
+        
+        populationLegend.addTo(map);
+        
+        
+        // create fullscreen control
+		var fullScreen = new L.Control.FullScreen();
+		// add fullscreen control to the map
+		map.addControl(fullScreen);
+
+		// detect fullscreen toggling
+		map.on('enterFullscreen', function(){
+			if(window.console) window.console.log('enterFullscreen');
+		});
+		map.on('exitFullscreen', function(){
+			if(window.console) window.console.log('exitFullscreen');
+		});
+
+        map.closePopup();
+
+    </script>
+
+
+</HTML>

@@ -1,0 +1,47 @@
+#Representation like Pleiades Syntax
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geovocab: <http://geovocab.org/spatial#> .
+@prefix osgeo: <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix pleiades: <http://pleiades.stoa.org/places/vocab#> .
+@prefix pleiadespt: <http://pleiades.stoa.org/vocabularies/place-types/> .
+@prefix pleiadestime: <http://pleiades.stoa.org/vocabularies/time-periods/> .
+@prefix findspot: <http://143.93.114.104/rest/samian/findspots/> .
+#Links to Pleiades
+@prefix oa: <http://www.openannotation.or4g/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix anno: <http://143.93.114.104/rest/samian/annotations#>.
+@prefix pleiadesplace: <http://pleiades.stoa.org/places/> .
+@prefix agent: <http://143.93.114.104/rest/samian/agents#>.
+@prefix findspot: <http://143.93.114.104/rest/samian/findspots/>.
+
+findspot:Burghoefe a geovocab:Feature;
+  rdfs:label "Burghoefe";
+  rdfs:comment "An ancient place";
+  foaf:primaryTopicOf findspot:Burghoefe.
+findspot:Burghoefe a pleiades:Place,
+  skos:Concept;
+  pleiades:hasFeatureType pleiadespt:settlement;
+  pleiades:hasFeatureType pleiadespt:findspot;
+  pleiades:hasLocation findspot:Burghoefe__Geschirrdepot;
+  gn:name "Burghoefe";
+  geo:lat 48.66;
+  geo:long 10.84333;
+  osgeo:asGeoJSON "{\"type\": \"Point\", \"coordinates\": [10.84333, 48.66]}";
+  osgeo:asWKT "POINT (10.84333 48.66)";
+  time:during pleiadestime:roman.
+  
+anno:Burghoefe-118986 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:Mees;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody pleiadesplace:118986;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+agent:Mees a foaf:person;
+  foaf:name "Allard Mees".

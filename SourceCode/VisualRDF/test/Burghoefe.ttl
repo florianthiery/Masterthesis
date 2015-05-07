@@ -1,0 +1,707 @@
+#Representation like Pleiades Syntax
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geovocab: <http://geovocab.org/spatial#> .
+@prefix osgeo: <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix pleiades: <http://pleiades.stoa.org/places/vocab#> .
+@prefix pleiadespt: <http://pleiades.stoa.org/vocabularies/place-types/> .
+@prefix pleiadestime: <http://pleiades.stoa.org/vocabularies/time-periods/> .
+@prefix findspot: <http://143.93.114.104/rest/samian/findspots/> .
+
+#Links to Fragments and Potters
+@prefix oa: <http://www.openannotation.or4g/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix anno: <http://143.93.114.104/rest/samian/annotations#>.
+@prefix agent: <http://143.93.114.104/rest/samian/agents#>.
+@prefix potter: <http://143.93.114.104/rest/samian/potters/>.
+@prefix findspot: <http://143.93.114.104/rest/samian/findspots/>.
+@prefix fragment: <http://143.93.114.104/rest/samian/fragments/>.
+
+#Links to Pleiades
+@prefix oa: <http://www.openannotation.or4g/ns/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix anno: <http://143.93.114.104/rest/samian/annotations#>.
+@prefix pleiadesplace: <http://pleiades.stoa.org/places/> .
+@prefix agent: <http://143.93.114.104/rest/samian/agents#>.
+@prefix findspot: <http://143.93.114.104/rest/samian/findspots/>.
+
+findspot:Burghoefe a geovocab:Feature;
+  rdfs:label "Burghoefe";
+  rdfs:comment "An ancient place";
+  foaf:primaryTopicOf findspot:Burghoefe.
+findspot:Burghoefe a pleiades:Place,
+  skos:Concept;
+  pleiades:hasFeatureType pleiadespt:settlement;
+  pleiades:hasFeatureType pleiadespt:findspot;
+  pleiades:hasLocation findspot:Burghoefe__Geschirrdepot;
+  gn:name "Burghoefe";
+  geo:lat 48.66;
+  geo:long 10.84333;
+  osgeo:asGeoJSON "{\"type\": \"Point\", \"coordinates\": [10.84333, 48.66]}";
+  osgeo:asWKT "POINT (10.84333 48.66)";
+  time:during pleiadestime:roman.
+
+
+anno:Burghoefe-Albus_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Albus_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Albus_iii a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Albus_iii;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Aquitanus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Aquitanus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Atretus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Atretus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-B._F._Attonus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:B._F._Attonus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Bassus_ii-Coelus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Bassus_ii-Coelus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Calvus_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Calvus_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Castus_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Castus_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-L._Cosius_Virilis a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:L._Cosius_Virilis;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Crestio a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Crestio;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Felix_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Felix_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Felix_i-Sev- a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Felix_i-Sev-;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Frontinus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Frontinus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Germanus_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Germanus_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Iulianus_iii a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Iulianus_iii;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Iullinus_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Iullinus_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Logirnus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Logirnus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Meddillus_(Mesillus) a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Meddillus_(Mesillus);
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Mommo a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Mommo;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Mona- a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Mona-;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Mont-_Cres-_(Montius_Cres) a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Mont-_Cres-_(Montius_Cres);
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-C._N-_Celsus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:C._N-_Celsus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Niger_ii-And- a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Niger_ii-And-;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Passenus_(Passienus) a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Passenus_(Passienus);
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Patricius_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Patricius_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Peregrinus_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Peregrinus_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Perrus_(Perus) a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Perrus_(Perus);
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Pudens_i a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Pudens_i;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Regenus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Regenus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Salutus a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Salutus;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Secu- a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Secu-;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-L._Senis_(L._Seni-_S-) a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:L._Senis_(L._Seni-_S-);
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Silvinus_ii a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Silvinus_ii;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-Vitalis_ii a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody potter:Vitalis_ii;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+anno:Burghoefe-18876 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:18876;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-19058 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:19058;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-21725 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:21725;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-21949 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:21949;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-22111 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:22111;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-22379 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:22379;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-24560 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:24560;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-30048 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:30048;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-31806 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:31806;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-31925 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:31925;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-31986 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:31986;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-37938 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:37938;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-38041 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:38041;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-42159 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:42159;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-51758 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:51758;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-53173 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:53173;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-62138 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:62138;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-62548 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:62548;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-65441 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:65441;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-65702 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:65702;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-68708 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:68708;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-68770 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:68770;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-68800 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:68800;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-68806 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:68806;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69007 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69007;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69130 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69130;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69173 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69173;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69346 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69346;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69349 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69349;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69367 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69367;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69391 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69391;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69442 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69442;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-69445 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:69445;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-73957 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:73957;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-75455 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:75455;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-75464 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:75464;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-80789 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:80789;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-93599 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:93599;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-97275 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:97275;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-97387 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:97387;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-98034 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:98034;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-98144 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:98144;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-100596 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:100596;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-100626 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:100626;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-102668 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:102668;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-104342 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:104342;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-108483 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:108483;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-110490 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:110490;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-111028 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:111028;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-117281 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:117281;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-119668 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:119668;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-126863 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:126863;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-129712 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:129712;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-133022 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:133022;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-137314 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:137314;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-151538 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:151538;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-151751 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:151751;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+anno:Burghoefe-152517 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:thiery;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody fragment:152517;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Fragment was found, produced or exported to Findspot.".
+agent:thiery a foaf:person;
+  foaf:name "Florian Thiery".
+
+
+anno:Burghoefe-118986 a oa:Annotation;
+  oa:motivatedBy oa:linking;
+  oa:annotatedBy agent:Mees;
+  oa:annotatedAt "Mon Nov 04 20:25:28 CET 2013";
+  oa:hasBody pleiadesplace:118986;
+  oa:hasTarget findspot:Burghoefe;
+  dcterms:description "Link made by Heinz/Mees/Thiery. Database by RGZM. Potter has worked in Findspot or exported to it.".
+agent:Mees a foaf:person;
+  foaf:name "Allard Mees".

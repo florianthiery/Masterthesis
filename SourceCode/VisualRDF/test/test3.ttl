@@ -1,0 +1,9 @@
+@prefix test: <http://meineseitekommtdahin.de/>.
+
+test:A test:frueherals test:B .
+test:B test:frueherals test:C .
+test:C test:spaeterals test:E .
+
+test:E test:spaeterals test:D .
+test:F test:spaeterals test:E .
+test:G test:spaeterals test:F .
